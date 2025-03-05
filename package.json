@@ -1,0 +1,35 @@
+{
+  "name": "desktop-organizer",
+  "version": "1.0.0",
+  "description": "在桌面壁纸上创建苹果风格的半透明圆角矩形区域",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.9.8",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  },
+  "build": {
+    "appId": "com.desktop.organizer",
+    "productName": "Desktop Organizer",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1024053774/desktopOrganizer.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/a1024053774/desktopOrganizer/issues"
+  },
+  "homepage": "https://github.com/a1024053774/desktopOrganizer#readme"
+}

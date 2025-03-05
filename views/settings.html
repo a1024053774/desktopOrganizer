@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桌面区域设置</title>
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <style>
+    /* 确保设置窗口有正确的背景色 */
+    body {
+      background-color: #f0f0f0 !important;
+      margin: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body class="settings">
+  <header>
+    <h1>桌面区域设置</h1>
+    <p>创建和管理桌面上的半透明区域</p>
+  </header>
+  
+  <main id="settings-container"></main>
+
+  <footer>
+    <p>使用 Ctrl+Shift+D 快捷键随时打开此设置窗口</p>
+  </footer>
+  
+  <script src="../src/components/Rectangle.js"></script>
+  <script src="../src/components/Controls.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const container = document.getElementById('settings-container');
+      
+      // 初始化控制面板
+      const controls = new Controls(container, {
+        onAdd: async (rectangleData) => {
+          await window.electronAPI.addRectangle(rectangleData);
+          updateRectanglesList();
+        },
+        
+        onUpdate: async (rectangleData) => {
+          await window.electronAPI.updateRectangle(rectangleData);
+          updateRectanglesList();
+        },
+        
+        onDelete: async (id) => {
+          await window.electronAPI.deleteRectangle(id);
+          updateRectanglesList();
+        }
+      });
+      
+      // 获取并更新矩形列表
+      const updateRectanglesList = async () => {
+        const rectangles = await window.electronAPI.getRectangles();
+        controls.updateRectanglesList(rectangles);
+      };
+      
+      // 监听矩形更新
+      window.electronAPI.onRectanglesUpdated((rectangles) => {
+        controls.updateRectanglesList(rectangles);
+      });
+      
+      // 初始加载
+      await updateRectanglesList();
+    });
+  </script>
+</body>
+</html>

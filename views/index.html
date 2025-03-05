@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桌面区域组织器</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: transparent !important;
+      background: none !important;
+    }
+    #rectangles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background-color: transparent !important;
+    }
+    /* 复制必要的矩形样式 */
+    .desktop-rectangle {
+      position: absolute;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .rectangle-title {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="rectangles-container"></div>
+  
+  <script src="../src/renderer.js"></script>
+</body>
+</html>
