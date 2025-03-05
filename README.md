@@ -98,3 +98,5 @@ desktop-organizer/
 1. 修改 `main.css` 文件来自定义矩形区域的样式
 2. 在 `Rectangle.js` 中可以添加更多属性来扩展矩形功能
 3. 编辑 `Controls.js` 来添加更多控制选项
+## 下载
+你可以从[这里](https://github.com/a1024053774/desktopOrganizer/releases/latest)下载最新版本。
