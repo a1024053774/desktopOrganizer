@@ -113,3 +113,5 @@ desktop-organizer/
 1. Modify `main.css` to customize the style of rectangle areas
 2. Add more properties in `Rectangle.js` to extend rectangle functionality
 3. Edit `Controls.js` to add more control options
+## Download
+You can download it from[here](https://github.com/a1024053774/desktopOrganizer/releases/latest)to get latest version.
