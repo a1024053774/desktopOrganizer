@@ -1,3 +1,5 @@
+![example](https://github.com/user-attachments/assets/d0655d24-fa80-4bd9-ad29-c3d76cdb4696)
+
 # 桌面区域组织器
 
 一个基于 Electron 的应用程序，可在桌面上创建苹果风格的半透明圆角矩形区域，帮助用户更好地组织和分类桌面文件。
