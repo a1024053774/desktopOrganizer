@@ -1,5 +1,5 @@
-# Deskt![example](https://github.com/user-attachments/assets/806a1867-087d-4671-90ba-e2b75fe04ea6)
-op Organizer
+![example](https://github.com/user-attachments/assets/806a1867-087d-4671-90ba-e2b75fe04ea6)
+# Desktop Organizer
 
 An Electron-based application that creates Apple-style semi-transparent rounded rectangles on your desktop wallpaper, helping users better organize and categorize desktop files.
 
