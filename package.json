@@ -5,22 +5,31 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder --win portable"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^25.9.8",
-    "electron-builder": "^24.13.3"
+    "electron": "^25.0.0",
+    "electron-builder": "^23.0.0"
   },
   "dependencies": {
-    "electron-store": "^8.2.0"
+    "electron-store": "^8.1.0"
   },
   "build": {
     "appId": "com.desktop.organizer",
     "productName": "Desktop Organizer",
+    "files": [
+      "src/**/*",
+      "views/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
     "win": {
-      "target": "nsis"
+      "target": [
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
     }
   },
   "repository": {
