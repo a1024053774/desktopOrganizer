@@ -115,4 +115,4 @@ desktop-organizer/
 2. Add more properties in `Rectangle.js` to extend rectangle functionality
 3. Edit `Controls.js` to add more control options
 ## Download
-You can download it from[here](https://github.com/a1024053774/desktopOrganizer/releases/latest)to get latest version.
+You can download it from [here](https://github.com/a1024053774/desktopOrganizer/releases/latest) to get latest version.
