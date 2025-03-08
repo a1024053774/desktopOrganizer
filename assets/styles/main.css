@@ -20,11 +20,37 @@ body:not(.settings) {
 /* 设置窗口样式 */
 body.settings {
   background-color: #f0f0f0 !important; /* 强制覆盖任何透明设置 */
-  padding: 20px;
   max-width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+}
+/* 自定义滚动条样式 */
+.settings-content::-webkit-scrollbar {
+  width: 8px;
+}
+.settings-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 确保表单内容有适当的间距 */
+.controls-form {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.rectangles-list {
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 header {

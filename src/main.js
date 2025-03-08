@@ -54,14 +54,20 @@ function createSettingsWindow() {
     settingsWindow.focus();
     return;
   }
+   // 获取显示器尺寸
+   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
+   // 调整窗口大小和位置
   settingsWindow = new BrowserWindow({
-    width: 500,
-    height: 600,
+    width: Math.min(500, width * 0.8),     // 设置合理的宽度
+    height: Math.min(600, height * 0.8),   // 设置合理的高度
+    minWidth: 400,                         // 最小宽度
+    minHeight: 500,                        // 最小高度
     title: '桌面区域设置',
     transparent: false,  // 确保不是透明的
     frame: true,        // 保留窗口框架
     backgroundColor: '#ffffff', // 白色背景
+    center: true,                          // 居中显示
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,

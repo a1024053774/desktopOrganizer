@@ -11,6 +11,26 @@
       background-color: #f0f0f0 !important;
       margin: 0;
       padding: 20px;
+      height: 100vh;
+      overflow: hidden; /* 防止body滚动 */
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 20px 0 20px;
+      flex-shrink: 0; /* 防止头部压缩 */
+    }
+    
+    .settings-content {
+      flex: 1;
+      overflow-y: auto; /* 添加垂直滚动条 */
+      padding: 0 20px;
+    }
+    
+    footer {
+      padding: 10px 20px;
+      flex-shrink: 0; /* 防止底部压缩 */
     }
   </style>
 </head>
@@ -20,7 +40,10 @@
     <p>创建和管理桌面上的半透明区域</p>
   </header>
   
-  <main id="settings-container"></main>
+  <!-- 添加可滚动容器 -->
+  <div class="settings-content">
+    <main id="settings-container"></main>
+  </div>
 
   <footer>
     <p>使用 Ctrl+Shift+D 快捷键随时打开此设置窗口</p>
